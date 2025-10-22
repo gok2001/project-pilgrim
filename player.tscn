@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtnmwtjtr1ohl"]
+
+[ext_resource type="Texture2D" uid="uid://dwsig64gjwuxn" path="res://assets/characters/player/player_idle_01.png" id="1_dw050"]
+[ext_resource type="Texture2D" uid="uid://qpyoy1n1yui4" path="res://assets/characters/player/player_attack_01.png" id="2_b26j0"]
+[ext_resource type="Texture2D" uid="uid://bclp77qir3xu6" path="res://assets/characters/player/player_attack_02.png" id="3_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://b5bv4u46m6ott" path="res://assets/characters/player/player_idle_02.png" id="4_nvl01"]
+[ext_resource type="Texture2D" uid="uid://dx32jyksrhi36" path="res://assets/characters/player/player_jumping_01.png" id="5_ivps1"]
+[ext_resource type="Texture2D" uid="uid://fonua4igj8nj" path="res://assets/characters/player/player_jumping_02.png" id="6_urp6f"]
+[ext_resource type="Texture2D" uid="uid://cbxhkphqu35u8" path="res://assets/characters/player/player_jumping_03.png" id="7_bwjto"]
+[ext_resource type="Texture2D" uid="uid://drsdmpkovcnpb" path="res://assets/characters/player/player_running.png" id="8_606se"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b26j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7ghd")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nvl01")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bwjto")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_606se")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dw050"]
+radius = 30.0
+height = 110.0
+
+[node name="Player" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sh265")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 0)
+shape = SubResource("CapsuleShape2D_dw050")

@@ -1,0 +1,123 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+# ================================
+# 🕹️ GODOT ENGINE
+# ================================
+
+# Arquivos de cache e builds
+.import/
+.export/
+.export_presets.cfg
+*.import
+
+# Dados do editor (cache local)
+.editor_settings-*.tres
+.project_metadata/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Arquivos de backup
+*.tmp
+*.bak
+*.old
+
+# Arquivos gerados automaticamente
+*.translation
+*.mo
+*.mono
+*.pck
+*.zip
+*.exe
+*.dmg
+*.app
+*.apk
+*.aab
+
+# Arquivos de autoimport do Godot
+*.gdignore
+
+# ================================
+# 💻 SISTEMA OPERACIONAL
+# ================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Linux
+*~
+.nfs*
+
+# ================================
+# 🧑‍💻 EDITORES E IDEs
+# ================================
+
+# VS Code
+.vscode/
+.history/
+.code-workspace
+
+# JetBrains (Rider, PyCharm, etc.)
+.idea/
+*.iml
+out/
+
+# ================================
+# 🧩 PYTHON / TOOLS (opcional)
+# ================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env/
+venv/
+.envrc
+.env.local
+
+# ================================
+# 🎨 ASSETS E ARQUIVOS GRANDES
+# ================================
+# (Descomente se você quiser manter o repositório leve)
+
+# Texturas e renders grandes
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.psd
+*.xcf
+
+# Áudio e vídeo
+*.wav
+*.mp3
+*.ogg
+*.mp4
+*.avi
+*.mov
+
+# ================================
+# 🔧 OUTROS
+# ================================
+# Arquivos temporários de compressão
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Build e release folders
+/build/
+/bin/
+/dist/
