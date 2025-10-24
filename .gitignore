@@ -1,123 +1,50 @@
-# Godot 4+ specific ignores
-.godot/
-/android/
-# ================================
-# 🕹️ GODOT ENGINE
-# ================================
-
-# Arquivos de cache e builds
+# ===============================
+# Godot temporary and import files
+# ===============================
 .import/
 .export/
-.export_presets.cfg
-*.import
+.metadata/
+.godot/
 
-# Dados do editor (cache local)
-.editor_settings-*.tres
-.project_metadata/
-.cache/
-
-# Logs
-logs/
-*.log
-
-# Arquivos de backup
-*.tmp
-*.bak
-*.old
-
-# Arquivos gerados automaticamente
-*.translation
-*.mo
+# ===============================
+# Godot cache and local settings
+# ===============================
 *.mono
-*.pck
-*.zip
-*.exe
-*.dmg
-*.app
-*.apk
-*.aab
+*.scons
+*.user
+*.tmp
 
-# Arquivos de autoimport do Godot
-*.gdignore
-
-# ================================
-# 💻 SISTEMA OPERACIONAL
-# ================================
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
+# ===============================
+# OS-specific files
+# ===============================
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
-__MACOSX/
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
 # Linux
 *~
 .nfs*
 
-# ================================
-# 🧑‍💻 EDITORES E IDEs
-# ================================
-
-# VS Code
+# ===============================
+# IDE-specific files
+# ===============================
 .vscode/
-.history/
-.code-workspace
-
-# JetBrains (Rider, PyCharm, etc.)
 .idea/
-*.iml
-out/
+*.code-workspace
 
-# ================================
-# 🧩 PYTHON / TOOLS (opcional)
-# ================================
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env/
-venv/
-.envrc
-.env.local
+# ===============================
+# Build / binaries
+# ===============================
+bin/
+build/
 
-# ================================
-# 🎨 ASSETS E ARQUIVOS GRANDES
-# ================================
-# (Descomente se você quiser manter o repositório leve)
-
-# Texturas e renders grandes
-*.png
-*.jpg
-*.jpeg
-*.tiff
-*.psd
-*.xcf
-
-# Áudio e vídeo
-*.wav
-*.mp3
-*.ogg
-*.mp4
-*.avi
-*.mov
-
-# ================================
-# 🔧 OUTROS
-# ================================
-# Arquivos temporários de compressão
-*.zip
-*.rar
-*.7z
-*.tar
-*.gz
-
-# Build e release folders
-/build/
-/bin/
-/dist/
+# ===============================
+# Logs
+# ===============================
+*.log
