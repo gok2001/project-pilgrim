@@ -24,10 +24,10 @@ The project is being developed as a hobby using **Godot Engine**.
 ## Folder Structure
 
 res://
-`assets/` - Sprites, sounds and temporary images
-`scenes/` - All game scenes
-`scripts` - GDScript for player, enemies and systems
-`ui-` - User interface elements
+* `assets/` - Sprites, sounds and temporary images
+* `scenes/` - All game scenes
+* `scripts` - GDScript for player, enemies and systems
+* `ui-` - User interface elements
 
 ---
 
