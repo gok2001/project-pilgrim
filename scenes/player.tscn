@@ -30,4 +30,9 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_g2els")
 debug_color = Color(0.98007387, 0.080927484, 0.30018196, 0.41960785)
 
+[node name="HurtTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="HurtTimer" to="." method="_on_hurt_timer_timeout"]

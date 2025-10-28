@@ -6,12 +6,15 @@ signal health_changed
 
 @onready var camera = $Camera2D
 @onready var tilemap = get_parent().get_node('TileMap')
+
 @export var max_health = 100
 @onready var health: int = max_health
 
 var gravity = ProjectSettings.get_setting('physics/2d/default_gravity')
 const WALK_SPEED = 300.0
 const JUMP_VELOCITY = -500.0
+
+var is_invulnerable = false
 
 
 func _ready():
@@ -42,13 +45,22 @@ func _physics_process(delta: float):
 
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if area.is_in_group('spikes'):
+	if area.is_in_group('spikes') and not is_invulnerable:
+		modulate.a = 0.5
+
 		take_damage(10)
+		$HurtTimer.start()
 
 
 func take_damage(amount):
 	health -= amount
 	if health < 0:
 		health = max_health
+	is_invulnerable = true
 
 	health_changed.emit()
+
+
+func _on_hurt_timer_timeout() -> void:
+	modulate.a = 1
+	is_invulnerable = false

@@ -87,7 +87,7 @@ platform_floor_layers = 4294967046
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Health Bar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 offset_left = 23.0
 offset_top = 19.0
 offset_right = 239.0
