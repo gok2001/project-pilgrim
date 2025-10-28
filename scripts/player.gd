@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
+class_name Player
+
+signal health_changed
 
 @onready var camera = $Camera2D
 @onready var tilemap = get_parent().get_node('TileMap')
+@export var max_health = 100
+@onready var health: int = max_health
 
 var gravity = ProjectSettings.get_setting('physics/2d/default_gravity')
 const WALK_SPEED = 300.0
@@ -34,3 +39,16 @@ func _physics_process(delta: float):
 	velocity.x = direction * WALK_SPEED
 
 	move_and_slide()
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group('spikes'):
+		take_damage(10)
+
+
+func take_damage(amount):
+	health -= amount
+	if health < 0:
+		health = max_health
+
+	health_changed.emit()

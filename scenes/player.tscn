@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtnmwtjtr1ohl"]
+[gd_scene load_steps=5 format=3 uid="uid://dtnmwtjtr1ohl"]
 
 [ext_resource type="Script" uid="uid://buk7bebl0ckln" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://assets/temporary-images/icon.svg" id="4_smehm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(64, 64)
 
 [node name="Player" type="CharacterBody2D"]
@@ -19,3 +22,12 @@ shape = SubResource("RectangleShape2D_3vyb7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_g2els")
+debug_color = Color(0.98007387, 0.080927484, 0.30018196, 0.41960785)
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
