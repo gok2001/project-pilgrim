@@ -93,5 +93,6 @@ offset_top = 19.0
 offset_right = 239.0
 offset_bottom = 66.0
 value = 100.0
+show_percentage = false
 script = ExtResource("3_u3kgt")
 player = NodePath("../../Player")

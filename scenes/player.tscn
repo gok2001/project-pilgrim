@@ -31,8 +31,121 @@ shape = SubResource("RectangleShape2D_g2els")
 debug_color = Color(0.98007387, 0.080927484, 0.30018196, 0.41960785)
 
 [node name="HurtTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="Left" type="Node2D" parent="Raycasts"]
+
+[node name="RayCastLeft1" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, 0)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft2" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, 8)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft3" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, 16)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft4" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, 24)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft5" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, 32)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft6" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, -8)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft7" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, -16)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft8" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, -24)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastLeft9" type="RayCast2D" parent="Raycasts/Left"]
+position = Vector2(-12, -32)
+target_position = Vector2(-28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="Right" type="Node2D" parent="Raycasts"]
+
+[node name="RayCastRight1" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, 0)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight2" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, 8)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight3" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, 16)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight4" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, 24)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight5" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, 32)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight6" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, -8)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight7" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, -16)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight8" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, -24)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastRight9" type="RayCast2D" parent="Raycasts/Right"]
+position = Vector2(12, -32)
+target_position = Vector2(28, 0)
+collision_mask = 4
+collide_with_areas = true
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="HurtTimer" to="." method="_on_hurt_timer_timeout"]
